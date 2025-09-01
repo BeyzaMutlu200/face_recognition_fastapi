@@ -21,8 +21,8 @@ This repository contains a **real-time face recognition system using a webcam** 
 ```bash
 pip install opencv-python face_recognition numpy fastapi uvicorn
 ```
-Usage
-1. Real-Time Face Recognition (main.py)
+##Usage
+#Real-Time Face Recognition (main.py)
 ```bash   
 python main.py
 ```
@@ -30,7 +30,7 @@ Recognizes faces stored in the face_dataset folder.
 Draws a red rectangle around recognized faces with their names.
 Press ESC to exit.
 
-2. FastAPI: Upload and Recognize Faces (api_try.py)
+#2.FastAPI: Upload and Recognize Faces (api_try.py)
 # Start the API
 ```bash
 python api_try.py
@@ -38,25 +38,25 @@ python api_try.py
 # Or use uvicorn
 uvicorn api_try:app --reload
 ```
-Endpoints
+#Endpoints
 
 POST /upload_file/
 Upload a new face image.
 
 Parameters: name (file name), file (UploadFile)
 
-Example:
+#Example:
 ```bash
 curl -X POST http://127.0.0.1:8000/upload_file/ -F "name=example.jpg" -F "file=@example.jpg"
 ```
 POST /recog_persons/
 Start face recognition via webcam.
 
-Example:
+#Example:
 ``` bash
 curl -X POST http://127.0.0.1:8000/recog_persons/
 ```
-File Structure
+##File Structure
 face_recognition_fastapi/
 │
 ├─ main.py          # Real-time webcam face recognition
@@ -64,11 +64,12 @@ face_recognition_fastapi/
 ├─ face_dataset/    # Folder containing face images
 └─ README.md
 
-Notes
+##Notes
 
 main.py detects faces in real-time from the webcam and displays their names.
 
 api_try.py allows adding new face images via API and starting the recognition process.
 
 Unrecognized faces will be labeled as Unknown.
+
 
