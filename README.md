@@ -32,7 +32,7 @@ Recognizes faces stored in the face_dataset folder.
 Draws a red rectangle around recognized faces with their names.
 Press ESC to exit.
 
-#2.FastAPI: Upload and Recognize Faces (api_try.py)
+# 2.FastAPI: Upload and Recognize Faces (api_try.py)
 # Start the API
 ```bash
 python api_try.py
@@ -43,6 +43,7 @@ uvicorn api_try:app --reload
 # Endpoints
 
 POST /upload_file/
+
 Upload a new face image.
 
 Parameters: name (file name), file (UploadFile)
@@ -73,6 +74,7 @@ main.py detects faces in real-time from the webcam and displays their names.
 api_try.py allows adding new face images via API and starting the recognition process.
 
 Unrecognized faces will be labeled as Unknown.
+
 
 
 
